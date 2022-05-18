@@ -1,6 +1,1 @@
-Param(
-    [string] $ScriptTest
-)
-$date=$(Get-Date).ToString("yyyyMMddhhmmss")
-$OutputFileName=$date+"_ReportSuite.html"
-./vendor/bin/phpunit ./tests/$ScriptTest.php --testdox-html ./logs/tests/$OutputFileName --coverage-html ./logs/coverage
+php ./vendor/bin/phpunit --testdox-html ./logs/tests/ReportSuite.html --coverage-html ./logs/coverage/

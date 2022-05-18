@@ -1,6 +1,5 @@
 <?php
 namespace ITEC\DAW\puntos;
-use ITEC\DAW\puntos\poligono;
 
 class rectangulo extends poligono{
 
