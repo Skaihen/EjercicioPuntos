@@ -3,25 +3,25 @@
 use ITEC\DAW\puntos\punto;
 use PHPUnit\Framework\TestCase;
 
-final class puntoTest extends TestCase{
-    public function DP_test_puntos(){
+final class cuadradoTest extends TestCase{
+    public function DP_test_cuadrado(){
         return [
-            "Punto 1" => [
+            "Cuadrado 1" => [
                 ["X"=>1,"Y"=>2],
-                1,
-                2
+                punto::createPunto(1,2),
+                punto::createPunto(-3,7)
             ],
-            "Punto 2" => [
+            "Cuadrado 2" => [
                 ["X"=>-3,"Y"=>7],
-                -3,
-                7
+                punto::createPunto(6,1),
+                punto::createPunto(2,-3)
             ]
         ];
     }
     /**
-    * @dataProvider DP_test_puntos
+    * @dataProvider DP_test_cuadrado
     */
-    public function test_createPunto($esperado, $posX, $posY){
+    public function test_createCuadrado($esperado, $posX, $posY){
         $puntoPrueba = new punto($posX, $posY);
         $this->assertEquals($esperado, $puntoPrueba->getPos());
         return $puntoPrueba;
