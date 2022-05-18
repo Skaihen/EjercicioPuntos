@@ -5,7 +5,7 @@ use ITEC\DAW\puntos\poligono;
 class cuadrado extends poligono{
 
     public function __construct(punto $punto1, punto $punto2){
-        $this->distancia = $this->calcDistancia($punto1, $punto2);
+        parent::__construct($punto1, $punto2);
     }
 
     public static function createCuadrado(punto $punto1, punto $punto2){
